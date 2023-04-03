@@ -1,18 +1,227 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="@color/black"
+        android:text="Row"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TableLayout
+        android:id="@+id/RowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RowView">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@color/color1" />
+
+            <TextView
+                android:layout_width="@dimen/width100"
+                android:layout_height="@dimen/height100"
+                android:background="@color/color4" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@color/color2" />
+
+        </TableRow>
+    </TableLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Column"/>
+        <TableLayout
+            android:id="@+id/ColumnLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ColumnView"
+            android:stretchColumns="0,1" >
+            <TableRow>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="@dimen/width100"
+                        android:layout_height="@dimen/height100"
+                        android:background="@color/color1" />
+
+                    <TextView
+                        android:layout_width="@dimen/width100"
+                        android:layout_height="@dimen/height100"
+                        android:background="@color/color4" />
+
+                    <TextView
+                        android:layout_width="@dimen/width100"
+                        android:layout_height="@dimen/height100"
+                        android:background="@color/color2" />
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="ListView"/>
+
+        <TableLayout
+            android:id="@+id/ListViewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ListView">
+
+            <TableRow>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height100"
+                    android:layout_weight="1"
+                    android:background="@color/color1"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height100"
+                    android:layout_weight="1"
+                    android:background="@color/color4"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height50"
+                    android:layout_weight="1"
+                    android:background="@color/color2"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Grid View" />
+
+    <TableLayout
+        android:id="@+id/GridViewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:stretchColumns="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GridView">
+
+    <TableRow android:layout_width="wrap_content">
+
+        <LinearLayout
+
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_width="@dimen/width180"
+            android:layout_height="@dimen/height180"
+            android:background="@color/grid1"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="He'd have you all unravel at the"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_width="@dimen/width180"
+            android:layout_height="@dimen/height180"
+            android:background="@color/grid2"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Heed not the rabble"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </TableRow>
+
+    <TableRow>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_width="@dimen/width180"
+            android:layout_height="@dimen/height180"
+            android:background="@color/grid3"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Sound of screams but the"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_width="@dimen/width180"
+            android:layout_height="@dimen/height180"
+            android:background="@color/grid4"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Who scream"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </TableRow>
+
+</TableLayout>
+
+</LinearLayout>
+</ScrollView>
+
