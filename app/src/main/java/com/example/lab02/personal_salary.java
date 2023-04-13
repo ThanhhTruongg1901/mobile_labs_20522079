@@ -13,7 +13,7 @@ public class personal_salary {
 
     public double GetSalary (int Gross){
         double temp = Gross + (1 - 0.105);
-        if (temp <= 110000000) return temp;
-        return 110000000 + (temp - 110000000)*(1-0.05);
+        if (temp <= 11000000) return temp;
+        return 11000000 + (temp - 11000000)*(1-0.05);
     }
 }
