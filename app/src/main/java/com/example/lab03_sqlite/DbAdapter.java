@@ -5,10 +5,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.example.lab03_sqlite.*;
-
 public class DbAdapter {
-    public static final String KEY_ID = "_id";
+    public static final String KEY_ID = "id";
     public static final String KEY_NAME = "name";
     public static final String KEY_PHONE ="phone";
 
@@ -33,7 +31,7 @@ public class DbAdapter {
         dbHelper.close();
     }
 
-    public long createUser(String name, String phone) {
+    public long createPerson(String name, String phone) {
         ContentValues inititalValues = new ContentValues();
         inititalValues.put(KEY_NAME, name);
         inititalValues.put(KEY_PHONE, phone);

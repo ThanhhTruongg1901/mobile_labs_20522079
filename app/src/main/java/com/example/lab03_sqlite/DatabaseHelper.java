@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    private static final String DATABASE_CREATE = "create table Person (_id integer primary key autoincrement, "
+    private static final String DATABASE_CREATE = "create table Person (id integer primary key autoincrement, "
             + "name text not null," +
             "phone text not null);";
 
